@@ -1,31 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-.container{
+body {
+    transition: background 0.3s, color 0.3s;
+}
+.container {
     width: 100%;
     min-height: 100vh;
     background: rgb(24, 24, 24);
-    color: aliceblue;
-    padding-top: 3%;
-    padding-left: 10%;
+    color: rgb(251, 251, 251);
+    padding: 4% 10%;
 }
-.container h1{
+.container h1 {
     display: flex;
     align-items: center;
     font-size: 35px;
     font-weight: 600;
 }
-.container h1 img{
-    width: 55px;
+.container h1 img {
+    width: 60px;
 }
-.container button img{
-    width: 25px;
-    margin-right: 8px;
-}
-.container button{
+.container button {
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -38,22 +36,101 @@
     margin: 30px 0 20px;
     cursor: pointer;
 }
-.input-box{
+.container button i {
+    width: 25px;
+    margin-right: 8px;
+}
+.input-box {
     position: relative;
     width: 100%;
     max-width: 500px;
     min-height: 150px;
     background: rgb(162, 159, 159);
-    color: black;
+    color: #333;
     padding: 20px;
     margin: 20px 0;
     outline: none;
     border-radius: 10px;
 }
-.input-box img{
+.input-box img {
     width: 25px;
     position: absolute;
     bottom: 15px;
     right: 15px;
     cursor: pointer;
+}
+/* Toggle Button */
+.toggle-mode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.toggle-mode:hover {
+    background: #666;
+}
+/* Dark Mode */
+.dark-mode {
+    background: white;
+    color: black;
+}
+.dark-mode .container {
+    background: #f4f4f4;
+    color: black;
+}
+.dark-mode .container button {
+    background: #ddd;
+    color: black;
+}
+.dark-mode .input-box {
+    background: white;
+    color: black;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 4% 5%;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 5% 3%;
+        text-align: center;
+    }
+    .container h1 {
+        font-size: 28px;
+        justify-content: center;
+    }
+    .container button {
+        font-size: 14px;
+        padding: 12px 20px;
+        margin: 20px auto;
+    }
+    .input-box {
+        max-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 6% 2%;
+    }
+    .container h1 {
+        font-size: 24px;
+    }
+    .container button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .input-box {
+        padding: 15px;
+    }
+    .input-box img {
+        width: 20px;
+    }
 }
