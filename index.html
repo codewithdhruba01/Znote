@@ -9,10 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <button class="toggle-mode">🌙</button>
+    
+    
+    <label class="switch">
+        <input type="checkbox" id="toggleMode">
+        <span class="slider">
+          <i class="fas fa-moon moon-icon"></i>
+          <i class="fas fa-sun sun-icon"></i>
+        </span>
+      </label>
+
     <div class="container">
        <h1><img src="Accets/notes.png" alt="NotesIcon">ZNotes</h1>
-       <button class="btn"><i class="fa-solid fa-pen-to-square"></i>Add Notes</button>
+       
+       <div class="search-container">
+         <input type="text" id="search-input" placeholder="Search notes...">
+       </div>
+
+       <button class="btn"><i class="fa-solid fa-pen-to-square"></i>Add Note</button>
+       
        <div class="notes-container"></div>
     </div>
     <script src="script.js"></script>
