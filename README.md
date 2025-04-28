@@ -64,14 +64,7 @@ ZNotes is a **responsive, feature-rich note-taking web application** built using
 
 ---
 
-
-## **🚀 Deployment & Future Improvements**  
-📌 The project **hosted on Netlify**
-
----
-
 ## **🔗 GitHub Repository & Live Demo**  
 - **GitHub Repo:** https://github.com/codewithdhruba01/Znote 
-- **Live Demo:** https://znotes-app.netlify.app/
 
 ---
