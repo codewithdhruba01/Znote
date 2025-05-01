@@ -32,15 +32,23 @@ createBtn.addEventListener("click", () => {
     title.setAttribute("placeholder", "Title...");
     title.setAttribute("maxlength", "50");
 
+    let toolbar = document.createElement("div");
+    toolbar.className = "toolbar";
+    toolbar.innerHTML = `
+        <button onclick="formatNote(this, 'bold')"><b>B</b></button>
+        <button onclick="formatNote(this, 'italic')"><i>I</i></button>
+        <button onclick="formatNote(this, 'underline')"><u>U</u></button>
+    `;
+
     let content = document.createElement("div");
     content.className = "note-content";
     content.setAttribute("contenteditable", "true");
-    content.setAttribute("placeholder", "Write something...");
 
     let img = document.createElement("img");
     img.src = "Accets/delete.png";
 
     inputBox.appendChild(title);
+    inputBox.appendChild(toolbar);
     inputBox.appendChild(content);
     inputBox.appendChild(img);
 
@@ -48,6 +56,15 @@ createBtn.addEventListener("click", () => {
     updateStorage();
     addEvents();
 });
+
+// Toolbar Formatting
+function formatNote(button, command) {
+    const inputBox = button.closest('.input-box');
+    const content = inputBox.querySelector('.note-content');
+    content.focus();
+    document.execCommand(command, false, null);
+    updateStorage();
+}
 
 // Delete and Update Events
 function addEvents() {

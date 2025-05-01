@@ -5,7 +5,7 @@ ZNotes is a **responsive, feature-rich note-taking web application** built using
 
 ---
 ##  Screenshot
-![Znote](Accets/Znote-app.png)
+![Znote](Accets/noteapp-layout.png)
 
 ## **📂 Features**
 

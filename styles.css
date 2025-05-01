@@ -66,7 +66,7 @@ body {
     outline: none;
     border-radius: 10px;
 }
-.input-box .note-title {
+.note-title {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 10px;
@@ -76,7 +76,7 @@ body {
     background: transparent;
     color: inherit;
 }
-.input-box .note-content {
+.note-content {
     font-size: 16px;
     border: none;
     outline: none;
@@ -93,7 +93,26 @@ body {
     cursor: pointer;
 }
 
-/* Toggle Switch Style */
+/* Toolbar */
+.toolbar {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.toolbar button {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.dark-mode .toolbar button {
+    background: #ddd;
+    color: black;
+}
+
+/* Toggle Switch */
 .switch {
     position: absolute;
     top: 20px;
@@ -164,7 +183,7 @@ input:checked + .slider .sun-icon {
     color: black;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     .container {
         padding: 5% 3%;
